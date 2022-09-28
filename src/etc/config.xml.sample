@@ -203,7 +203,7 @@
   </sysctl>
   <system>
     <optimization>normal</optimization>
-    <hostname>OPNsense</hostname>
+    <hostname>nova</hostname>
     <domain>localdomain</domain>
     <dnsallowoverride>1</dnsallowoverride>
     <group>
@@ -219,12 +219,12 @@
       <descr><![CDATA[System Administrator]]></descr>
       <scope>system</scope>
       <groupname>admins</groupname>
-      <password>$2y$10$YRVoF4SgskIsrXOvOQjGieB9XqHPRra9R7d80B3BZdbY/j21TwBfS</password>
+      <password>$2y$10$dxKU5x6JJhbGvfYUq12P6u.C6Cv3er5a04IIpGKfeUks1GblDacdK</password>
       <uid>0</uid>
     </user>
     <nextuid>2000</nextuid>
     <nextgid>2000</nextgid>
-    <timezone>Etc/UTC</timezone>
+    <timezone>Asia/Ho_Chi_Minh</timezone>
     <timeservers>0.opnsense.pool.ntp.org 1.opnsense.pool.ntp.org 2.opnsense.pool.ntp.org 3.opnsense.pool.ntp.org</timeservers>
     <webgui>
       <protocol>https</protocol>
