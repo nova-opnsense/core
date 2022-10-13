@@ -1,5 +1,5 @@
 <menu>
-    <Services>
+    <!-- <Services>
         <Unbound VisibleName="Unbound DNS" cssClass="fa fa-tags fa-fw">
             <General order="10" url="/services_unbound.php"/>
             <Overrides order="20" url="/ui/unbound/overrides/"/>
@@ -13,5 +13,5 @@
             <Statistics order="90" url="/ui/unbound/stats"/>
             <LogFile VisibleName="Log File" order="100" url="/ui/diagnostics/log/core/resolver"/>
         </Unbound>
-    </Services>
+    </Services> -->
 </menu>

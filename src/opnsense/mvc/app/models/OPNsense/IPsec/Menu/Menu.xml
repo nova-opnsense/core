@@ -1,5 +1,5 @@
 <menu>
-    <VPN>
+    <!-- <VPN>
         <IPsec cssClass="fa fa-lock fa-fw" order="10">
             <Tunnels order="10" VisibleName="Tunnel Settings" url="/ui/ipsec/tunnels">
                 <Phase1 url="/vpn_ipsec_phase1.php*" visibility="hidden"/>
@@ -19,5 +19,5 @@
             <SPD order="90" VisibleName="Security Policy Database" url="/ui/ipsec/spd"/>
             <LogFile order="100" VisibleName="Log File" url="/ui/diagnostics/log/core/ipsec"/>
         </IPsec>
-    </VPN>
+    </VPN> -->
 </menu>

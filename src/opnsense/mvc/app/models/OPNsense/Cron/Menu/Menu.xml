@@ -1,9 +1,9 @@
 <menu>
-    <System>
+    <!-- <System>
         <Settings>
             <Cron url="/ui/cron">
                 <item url="/ui/cron/*" visibility="hidden"/>
             </Cron>
         </Settings>
-    </System>
+    </System> -->
 </menu>

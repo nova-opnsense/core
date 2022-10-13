@@ -251,13 +251,13 @@ class MenuSystem
         $ordid = 0;
         foreach ($iftargets['if'] as $key => $descr) {
             if (array_key_exists($key, $iftargets['gr'])) {
-                $this->appendItem('Interfaces', $key, array(
+                $this->appendItem('NocConfig.Interfaces', $key, array(
                     'visiblename' => '[' . $descr . ']',
                     'cssclass' => 'fa fa-sitemap',
                     'order' => $ordid++,
                 ));
             } elseif (!array_key_exists($key, $ifgroups)) {
-                $this->appendItem('Interfaces', $key, array(
+                $this->appendItem('NocConfig.Interfaces', $key, array(
                     'url' => '/interfaces.php?if=' . $key,
                     'visiblename' => '[' . $descr . ']',
                     'cssclass' => 'fa fa-sitemap',
@@ -273,13 +273,13 @@ class MenuSystem
                     // referential integrity between ifgroups and interfaces isn't assured, skip when interface doesn't exist
                     continue;
                 }
-                $this->appendItem('Interfaces.' . $grouping, $key, array(
+                $this->appendItem('NocConfig.Interfaces.' . $grouping, $key, array(
                     'url' => '/interfaces.php?if=' . $key . '&group=' . $grouping,
                     'visiblename' => '[' . $iftargets['if'][$key] . ']',
                     'order' => array_search($key, array_keys($iftargets['if']))
                 ));
                 if ($first) {
-                    $this->appendItem('Interfaces.' . $grouping . '.' . $key, 'Origin', array(
+                    $this->appendItem('NocConfig.Interfaces.' . $grouping . '.' . $key, 'Origin', array(
                         'url' => '/interfaces.php?if=' . $key,
                         'visibility' => 'hidden',
                     ));
@@ -290,7 +290,7 @@ class MenuSystem
 
         $ordid = 100;
         foreach ($iftargets['wl'] as $key => $descr) {
-            $this->appendItem('Interfaces.Wireless', $key, array(
+            $this->appendItem('NocConfig.Interfaces', $key, array(
                 'visiblename' => sprintf(gettext('%s Status'), $descr),
                 'url' => '/status_wireless.php?if=' . $key,
                 'order' => $ordid++,
@@ -301,26 +301,26 @@ class MenuSystem
         $iftargets['fw'] = array_merge(array('FloatingRules' => gettext('Floating')), $iftargets['fw']);
         $ordid = 0;
         foreach ($iftargets['fw'] as $key => $descr) {
-            $this->appendItem('Firewall.Rules', $key, array(
+            $this->appendItem('NocConfig.Firewall', $key, array(
                 'url' => '/firewall_rules.php?if=' . $key,
-                'visiblename' => $descr,
+                'visiblename' => $descr . ' Firewall Rules',
                 'order' => $ordid++,
             ));
-            $this->appendItem('Firewall.Rules.' . $key, 'Select' . $key, array(
+            $this->appendItem('NocConfig.Firewall.' . $key, 'Select' . $key, array(
                 'url' => '/firewall_rules.php?if=' . $key . '&*',
                 'visibility' => 'hidden',
             ));
             if ($key == 'FloatingRules') {
-                $this->appendItem('Firewall.Rules.' . $key, 'Top' . $key, array(
+                $this->appendItem('NocConfig.Firewall.' . $key, 'Top' . $key, array(
                     'url' => '/firewall_rules.php',
                     'visibility' => 'hidden',
                 ));
             }
-            $this->appendItem('Firewall.Rules.' . $key, 'Add' . $key, array(
+            $this->appendItem('NocConfig.Firewall.' . $key, 'Add' . $key, array(
                 'url' => '/firewall_rules_edit.php?if=' . $key,
                 'visibility' => 'hidden',
             ));
-            $this->appendItem('Firewall.Rules.' . $key, 'Edit' . $key, array(
+            $this->appendItem('NocConfig.Firewall.' . $key, 'Edit' . $key, array(
                 'url' => '/firewall_rules_edit.php?if=' . $key . '&*',
                 'visibility' => 'hidden',
             ));
@@ -329,42 +329,42 @@ class MenuSystem
         // add interfaces to "Services: DHCPv[46]" menu tab:
         $ordid = 0;
         foreach ($iftargets['dhcp4'] as $key => $descr) {
-            $this->appendItem('Services.DHCPv4', $key, array(
+            $this->appendItem('NocConfig.Services', $key, array(
                 'url' => '/services_dhcp.php?if=' . $key,
-                'visiblename' => "[$descr]",
+                'visiblename' => "[$descr] DHCPv4",
                 'order' => $ordid++,
             ));
-            $this->appendItem('Services.DHCPv4.' . $key, 'Edit' . $key, array(
+            $this->appendItem('NocConfig.Services.' . $key, 'Edit' . $key, array(
                 'url' => '/services_dhcp.php?if=' . $key . '&*',
                 'visibility' => 'hidden',
             ));
-            $this->appendItem('Services.DHCPv4.' . $key, 'AddStatic' . $key, array(
+            $this->appendItem('NocConfig.Services.' . $key, 'AddStatic' . $key, array(
                 'url' => '/services_dhcp_edit.php?if=' . $key,
                 'visibility' => 'hidden',
             ));
-            $this->appendItem('Services.DHCPv4.' . $key, 'EditStatic' . $key, array(
+            $this->appendItem('NocConfig.Services.' . $key, 'EditStatic' . $key, array(
                 'url' => '/services_dhcp_edit.php?if=' . $key . '&*',
                 'visibility' => 'hidden',
             ));
         }
         $ordid = 0;
         foreach ($iftargets['dhcp6'] as $key => $descr) {
-            $this->appendItem('Services.DHCPv6', $key, array(
+            $this->appendItem('NocConfig.Services', $key, array(
                 'url' => '/services_dhcpv6.php?if=' . $key,
-                'visiblename' => "[$descr]",
+                'visiblename' => "[$descr] DHCPv6",
                 'order' => $ordid++,
             ));
-            $this->appendItem('Services.DHCPv6.' . $key, 'Add' . $key, array(
+            $this->appendItem('NocConfig.Services.' . $key, 'Add' . $key, array(
                 'url' => '/services_dhcpv6_edit.php?if=' . $key,
                 'visibility' => 'hidden',
             ));
-            $this->appendItem('Services.DHCPv6.' . $key, 'Edit' . $key, array(
+            $this->appendItem('NocConfig.Services.' . $key, 'Edit' . $key, array(
                 'url' => '/services_dhcpv6_edit.php?if=' . $key . '&*',
                 'visibility' => 'hidden',
             ));
-            $this->appendItem('Services.RouterAdv', $key, array(
+            $this->appendItem('NocConfig.Services', $key, array(
                 'url' => '/services_router_advertisements.php?if=' . $key,
-                'visiblename' => "[$descr]",
+                'visiblename' => "[$descr] DHCPv6 Adv",
                 'order' => $ordid++,
             ));
         }

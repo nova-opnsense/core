@@ -1,21 +1,23 @@
 <menu>
-    <Lobby order="10" cssClass="fa fa-laptop">
+    <!-- <Lobby order="10" cssClass="fa fa-laptop">
         <Dashboard order="0" url="/index.php" cssClass="fa fa-dashboard fa-fw">
             <Args url="/index.php*" visibility="hidden"/>
             <Root url="/" visibility="hidden"/>
             <RootArgs url="/?*" visibility="hidden"/>
         </Dashboard>
-        <!-- <License order="1" url="/ui/core/license" cssClass="fa fa-balance-scale fa-fw"/> -->
+        <License order="1" url="/ui/core/license" cssClass="fa fa-balance-scale fa-fw"/>
         <Password order="2" url="/system_usermanager_passwordmg.php" cssClass="fa fa-key fa-fw">
             <Edit url="/system_usermanager_passwordmg.php*" visibility="hidden"/>
         </Password>
         <Logout order="3" url="/index.php?logout" cssClass="fa fa-sign-out fa-fw"/>
-    </Lobby>
-    <Reporting order="15" cssClass="fa fa-area-chart">
+    </Lobby> -->
+
+    <!-- <Reporting order="15" cssClass="fa fa-area-chart">
         <Settings url="/reporting_settings.php" cssClass="fa fa-cog fa-fw"/>
         <Traffic url="/ui/diagnostics/traffic" cssClass="fa fa-line-chart fa-fw"/>
-    </Reporting>
-    <System order="20" cssClass="fa fa-server">
+    </Reporting> -->
+
+    <!-- <System order="20" cssClass="fa fa-server">
         <Access cssClass="fa fa-users fa-fw">
             <Users order="10" url="/system_usermanager.php">
                 <All url="/system_usermanager.php*" visibility="hidden"/>
@@ -100,8 +102,9 @@
                 <All url="/status_services.php?*" visibility="hidden"/>
             </Services>
         </Diagnostics>
-    </System>
-    <Interfaces order="30" cssClass="fa fa-sitemap">
+    </System> -->
+
+    <!-- <Interfaces order="30" cssClass="fa fa-sitemap">
         <Assignments order="900" url="/interfaces_assign.php" cssClass="fa fa-pencil fa-fw"/>
         <Overview order="910" url="/status_interfaces.php" cssClass="fa fa-tasks fa-fw"/>
         <Settings order="920" url="/system_advanced_network.php" cssClass="fa fa-cogs fa-fw"/>
@@ -146,8 +149,8 @@
             <TestPort VisibleName="Port Probe" url="/diag_testport.php"/>
             <Traceroute VisibleName="Trace Route" url="/diag_traceroute.php"/>
         </Diagnostics>
-    </Interfaces>
-    <Firewall order="40" cssClass="glyphicon glyphicon-fire">
+    </Interfaces> -->
+    <!-- <Firewall order="40" cssClass="glyphicon glyphicon-fire">
         <Aliases url="/ui/firewall/alias" cssClass="fa fa-list-alt fa-fw">
             <Edit url="/ui/firewall/alias/*" visibility="hidden"/>
         </Aliases>
@@ -192,8 +195,9 @@
             <Overview url="/ui/diagnostics/firewall/stats"/>
             <Plain VisibleName="Plain View" url="/ui/diagnostics/log/core/filter"/>
         </LogFiles>
-    </Firewall>
-    <Services order="60" cssClass="fa fa-cog">
+    </Firewall> -->
+
+    <!-- <Services order="60" cssClass="fa fa-cog">
         <DHCPv4 cssClass="fa fa-bullseye fa-fw">
             <Relay order="200" url="/services_dhcp_relay.php"/>
             <Leases order="300" url="/status_dhcp_leases.php">
@@ -209,8 +213,10 @@
         </DHCPv6>
         <OpenDNS VisibleName="OpenDNS" url="/services_opendns.php" cssClass="fa fa-tags fa-fw"/>
         <RouterAdv VisibleName="Router Advertisements" cssClass="fa fa-bullseye fa-fw" />
-    </Services>
-    <VPN order="50" cssClass="fa fa-globe">
+    </Services> -->
+
+
+    <!-- <VPN order="50" cssClass="fa fa-globe">
         <OpenVPN cssClass="fa fa-lock fa-fw" order="20">
             <Servers order="10" url="/vpn_openvpn_server.php">
                 <Edit url="/vpn_openvpn_server.php?*" visibility="hidden"/>
@@ -228,11 +234,13 @@
             <Status order="60" VisibleName="Connection Status" url="/status_openvpn.php"/>
             <LogFile order="70" VisibleName="Log File" url="/ui/diagnostics/log/core/openvpn"/>
         </OpenVPN>
-    </VPN>
-    <Power order="70" cssClass="fa fa-plug">
+    </VPN> -->
+
+    <!-- <Power order="70" cssClass="fa fa-plug">
         <Reboot order="10" url="/ui/core/reboot" cssClass="fa fa-repeat fa-fw"/>
         <PowerOff VisibleName="Power Off" order="20" url="/ui/core/halt" cssClass="fa fa-power-off fa-fw"/>
-    </Power>
+    </Power> -->
+
     <!-- <Help order="80" cssClass="fa fa-support">
         <Documentation order="10" url="https://docs.opnsense.org/" cssClass="fa fa-book" IsExternal="Y"/>
         <Forum VisibleName="User Forum" order="20" url="https://forum.opnsense.org/" cssClass="fa fa-ticket" IsExternal="Y"/>

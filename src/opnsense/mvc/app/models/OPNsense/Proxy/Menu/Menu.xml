@@ -1,5 +1,5 @@
 <menu>
-    <Services>
+    <!-- <Services>
       <WebProxy order="10" VisibleName="Web Proxy" cssClass="fa fa-bolt fa-fw">
           <Administration url="/ui/proxy">
             <ACL VisibleName="ACL" url="/ui/proxy#subtab_proxy-forward-acl"/>
@@ -19,5 +19,5 @@
           <Access order="30" VisibleName="Access Log" url="/ui/diagnostics/log/squid/access"/>
           <Store order="40" VisibleName="Store Log" url="/ui/diagnostics/log/squid/store"/>
       </WebProxy>
-    </Services>
+    </Services> -->
 </menu>
